@@ -65,21 +65,4 @@ Route::get('/search', 'App\Http\Controllers\news@search');
 
 
 
-// Auth::routes();
 
-
-// Auth::routes();
-
-// Route::middleware(['auth', 'user-role:user'])->group(function () {
-//     Route::get('/user-home', 'HomeController@userHome')->middleware('role:user');
-// });
-// Route::middleware(['auth', 'user-role:editor'])->group(function () {
-//     Route::get('/editor-home', 'HomeController@editorHome')->middleware('role:editor');
-// });
-// Route::middleware(['auth', 'user-role:admin'])->group(function () {
-//     Route::get('/admin-home', 'HomeController@adminHome')->middleware('role:admin');
-// });
-
-// Route::get('/user-home', 'HomeController@userHome')->middleware('role:user');
-// Route::get('/editor-home', 'HomeController@editorHome')->middleware('role:editor');
-// Route::get('/admin-home', 'HomeController@adminHome')->middleware('role:admin');
