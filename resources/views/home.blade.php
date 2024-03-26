@@ -156,10 +156,7 @@
 
     <div class="container-fluid p-0">
         <nav class="navbar navbar-expand-lg navbar-dark py-2 py-lg-0 px-lg-5">
-            <a href="index.html" class="navbar-brand d-block d-lg-none">
-                <h1 class="m-0 display-4 text-uppercase text-primary">Biz<span
-                        class="text-black font-weight-normal">News</span></h1>
-            </a>
+
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -204,7 +201,7 @@
     <div class="absolute inset-0 flex justify-center items-center">
         <div class="absolute inset-0 bg-cover bg-center"
              style="background-image: linear-gradient(to bottom, rgba(0, 0, 255, 0.2), rgba(2, 2, 2, 0.774)), url('{{ asset('img/background.jpg') }}');">
-            <h1 class="text-6xl font-bold text-white absolute inset-0 flex justify-center items-center animate-bounce-once">Welcome To Our Blog</h1>
+            <h1 class="text-6xl font-bold text-white absolute inset-0 flex justify-center items-center animate-bounce-once">Welcome To Our Blogs!</h1>
         </div>
     </div>
 </div>
@@ -259,7 +256,7 @@
 
 
                         </div>
-                        <a class="h2 m-0 text-white text-uppercase font-weight-bold" href="">Welcome to APIIT Stduent Blog!</a>
+                        <a class="h2 m-0 text-white text-uppercase font-weight-bold" href="">Welcome to APIIT Stduent Blogs!</a>
                     </div>
                 </div>
                 <div class="position-relative overflow-hidden" style="height: 500px;">
@@ -287,7 +284,7 @@
             <div class="row mx-0">
                 <div class="col-md-6 px-0">
                     <div class="position-relative overflow-hidden" style="height: 250px;">
-                        <img class="img-fluid w-100 h-100" src="img/news-700x435-1.jpg" style="object-fit: cover;">
+                        <img class="img-fluid w-100 h-100" src="img/computing school.jpg" style="object-fit: cover;">
                         <div class="overlay">
                             <div class="mb-2">
 
@@ -299,7 +296,7 @@
                 </div>
                 <div class="col-md-6 px-0">
                     <div class="position-relative overflow-hidden" style="height: 250px;">
-                        <img class="img-fluid w-100 h-100" src="img/news-700x435-2.jpg" style="object-fit: cover;">
+                        <img class="img-fluid w-100 h-100" src="img/law school.jpg" style="object-fit: cover;">
                         <div class="overlay">
                             <div class="mb-2">
 
@@ -311,7 +308,7 @@
                 </div>
                 <div class="col-md-6 px-0">
                     <div class="position-relative overflow-hidden" style="height: 250px;">
-                        <img class="img-fluid w-100 h-100" src="img/news-700x435-3.jpg" style="object-fit: cover;">
+                        <img class="img-fluid w-100 h-100" src="img/business school.jpg" style="object-fit: cover;">
                         <div class="overlay">
                             <div class="mb-2">
 
@@ -323,7 +320,7 @@
                 </div>
                 <div class="col-md-6 px-0">
                     <div class="position-relative overflow-hidden" style="height: 250px;">
-                        <img class="img-fluid w-100 h-100" src="img/news-700x435-4.jpg" style="object-fit: cover;">
+                        <img class="img-fluid w-100 h-100" src="img/foundation school.jpg" style="object-fit: cover;">
                         <div class="overlay">
                             <div class="mb-2">
 
@@ -411,8 +408,8 @@
                                 </div>
                                 <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
                                     <div class="d-flex align-items-center">
-                                        <img class="rounded-circle mr-2"  width="25"
-                                            height="25" alt="ML">
+                                        <img class="rounded-circle mr-2" src="img/user.jpg" width="25"
+                                            height="25" alt="">
                                         <small>{{ $l->author }}</small>
                                     </div>
                                     <div class="d-flex align-items-center">
