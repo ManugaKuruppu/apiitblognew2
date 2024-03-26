@@ -200,7 +200,7 @@
 <div class="relative h-screen overflow-hidden">
     <div class="absolute inset-0 flex justify-center items-center">
         <div class="absolute inset-0 bg-cover bg-center"
-             style="background-image: linear-gradient(to bottom, rgba(0, 0, 255, 0.2), rgba(2, 2, 2, 0.774)), url('{{ asset('img/background.jpg') }}');">
+             style="background-image: linear-gradient(to bottom, rgba(0, 0, 255, 0.2), rgba(2, 2, 2, 0.774)), url('{{ asset('img/back1.jpg') }}');">
             <h1 class="text-6xl font-bold text-white absolute inset-0 flex justify-center items-center animate-bounce-once">Welcome To Our Blogs!</h1>
         </div>
     </div>
