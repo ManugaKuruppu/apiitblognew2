@@ -293,8 +293,7 @@
 
                                 <
                             </div>
-                            <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="">Lorem
-                                ipsum dolor sit amet elit...</a>
+                            <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="">Computing School</a>
                         </div>
                     </div>
                 </div>
@@ -306,8 +305,7 @@
 
 
                             </div>
-                            <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="">Lorem
-                                ipsum dolor sit amet elit...</a>
+                            <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="">Law School</a>
                         </div>
                     </div>
                 </div>
@@ -319,8 +317,7 @@
 
                                 a>
                             </div>
-                            <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="">Lorem
-                                ipsum dolor sit amet elit...</a>
+                            <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="">Business School</a>
                         </div>
                     </div>
                 </div>
@@ -332,8 +329,7 @@
 
 
                             </div>
-                            <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="">Lorem
-                                ipsum dolor sit amet elit...</a>
+                            <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="">Foundation School</a>
                         </div>
                     </div>
                 </div>
@@ -349,7 +345,7 @@
 <div class="container-fluid pt-5 mb-3">
     <div class="container">
         <div class="section-title">
-            <h4 class="m-0 text-uppercase font-weight-bold">Featured Blogs</h4>
+            <h4 class="m-0 text-uppercase font-weight-bold">Featured News</h4>
         </div>
         <div class="owl-carousel news-carousel carousel-item-4 position-relative">
             @foreach ($data as $featuredblog)
