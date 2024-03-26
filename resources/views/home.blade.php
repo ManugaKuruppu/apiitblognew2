@@ -204,7 +204,7 @@
     <div class="absolute inset-0 flex justify-center items-center">
         <div class="absolute inset-0 bg-cover bg-center"
              style="background-image: linear-gradient(to bottom, rgba(0, 0, 255, 0.2), rgba(2, 2, 2, 0.774)), url('{{ asset('img/background.jpg') }}');">
-            <h1 class="text-6xl font-bold text-white absolute inset-0 flex justify-center items-center animate-bounce-once">Welcome To Our Blogs</h1>
+            <h1 class="text-6xl font-bold text-white absolute inset-0 flex justify-center items-center animate-bounce-once">Welcome To Our Blog</h1>
         </div>
     </div>
 </div>
@@ -291,7 +291,7 @@
                         <div class="overlay">
                             <div class="mb-2">
 
-                                
+
                             </div>
                             <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="">Computing School</a>
                         </div>
