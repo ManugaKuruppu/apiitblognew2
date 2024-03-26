@@ -291,7 +291,7 @@
                         <div class="overlay">
                             <div class="mb-2">
 
-                                <
+                                
                             </div>
                             <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="">Computing School</a>
                         </div>
@@ -315,7 +315,7 @@
                         <div class="overlay">
                             <div class="mb-2">
 
-                                a>
+
                             </div>
                             <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="">Business School</a>
                         </div>
