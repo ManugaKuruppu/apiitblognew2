@@ -234,10 +234,50 @@
 
 
 
-<section>
-
-    <p>Dummy Content</p>
+<section class="image-content-section">
+    <div class="image-container">
+        <img src="img/apiit.jpg" alt="Image Description">
+    </div>
+    <div class="content">
+        <p><b>At Asia Pacific Institute of Information Technology (APIIT), we believe in empowering our students
+            through education and innovation. Our blog showcases the diverse experiences, achievements, and
+            insights of our talented students.</p></b>
+    </div>
 </section>
+
+<style>
+    /* Add space before and after the section */
+    .image-content-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-around; /* Add space around items */
+        margin: 70px 0; /* Add more space above and below the section */
+    }
+
+    .image-container {
+        margin: 0 5em;
+        max-width: 600px; /* Set a maximum width for the image container */
+        border: 2px solid #ccc; /* Add border to the image container */
+        border-radius: 15px; /* Add border radius for a rounded look */
+        overflow: hidden; /* Hide any overflow from the image */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    }
+
+    .image-container img {
+        width: 100%; /* Make the image fill its container */
+        height: auto;
+        display: block; /* Ensure image doesn't have extra space */
+        margin right:300px;
+    }
+
+    .content {
+        display: flex;
+        color: black; /* Set font color to black */
+        font-size: 20px;
+        margin-right: 5em;
+    }
+    </style>
+
 
 
 
