@@ -59,6 +59,8 @@ class UserFactory extends Factory
                 ->state(fn (array $attributes, User $user) => [
                     'name' => $user->name.'\'s Team',
                     'user_id' => $user->id,
+                    'school_id' => $user->school_id,
+                    'year_id' => $user->year_id,
                     'personal_team' => true,
                 ])
                 ->when(is_callable($callback), $callback),

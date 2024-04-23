@@ -1,8 +1,13 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\QuestionController;
+use App\Http\Controllers\AnswerController;
+use App\Filament\Resources\PostResource\Pages\CreatePost;
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,62 +19,47 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', HomeController::class)->name('home');
 
-//Route::get('/', function () {
-//    return view('home');
-//});
+Route::get('/blog', [PostController::class, 'index'])->name('posts.index');
+
+Route::get('/blog/{post:slug}', [PostController::class, 'show'])->name('posts.show');
+
+Route::get('/posts/make', [PostController::class, 'make'])->name('posts.make');
+
+Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
+
+Route::get('/events', [EventController::class, 'index'])->name('event.index');
+
+Route::get('/questions', [QuestionController::class, 'index'])->name('questions.index');
+
+Route::get('/questions/create', [QuestionController::class, 'create'])->name('questions.create');
+
+Route::post('/questions', [QuestionController::class, 'store'])->name('questions.store');
+
+Route::get('/questions/{question}', [QuestionController::class, 'show'])->name('questions.show');
+
+Route::post('/questions/{question}/answers', [AnswerController::class, 'store'])->name('answers.store');
+
+Route::delete('answers/{answer}', [AnswerController::class, 'destroy'])->name('answers.destroy');
 
 
-Route::get('/admin', function () {
-    return view('admin.index');
-});
 
-Route::get('/article1', function () {
-    return view('admin.article1');
-});
 
+Route::get('/language/{locale}', function ($locale) {
+    if (array_key_exists($locale, config('app.supported_locales'))) {
+        session()->put('locale', $locale);
+    }
+
+    return redirect()->back();
+})->name('locale');
 
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    // Route::get('/dashboard', function () {
+    //     return view('dashboard');
+    // })->name('dashboard');
 });
-
-
-
-
-//make featureupdate controller
-
-Route::get('/featuredblog', function () {
-    return view('admin.featuredblog');
-});
-Route::post('/update', 'App\Http\Controllers\Featureupdate@update');
-Route::get('/', 'App\Http\Controllers\Featureupdate@index');
-
-//lates
-
-Route::get('/lates', function () {
-    return view('admin.latestnews');
-});
-Route::post('/latestnewsupdate', 'App\Http\Controllers\news@update');
-Route::get('/', 'App\Http\Controllers\news@index');
-
-Route::get('/search', 'App\Http\Controllers\news@search');
-
-
-
-
-
-Auth::routes();
-
-//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Route::get('admin/home', [App\Http\Controllers\HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
-

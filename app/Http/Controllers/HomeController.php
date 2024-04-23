@@ -2,32 +2,30 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class HomeController extends Controller
 {
     /**
-     * Create a new controller instance.
-     *
-     * @return void
+     * Handle the incoming request.
      */
-    public function __construct()
+    public function __invoke(Request $request)
     {
-        $this->middleware('auth');
-    }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
-    public function index()
-    {
-        return view('home');
-    }
+        $featuredPosts = Cache::remember('featuredPosts', now()->addDay(), function () {
+            return Post::published()->featured()->with('categories')->latest('published_at')->take(3)->get();
+        });
 
-    public function adminHome()
-    {
-        return view('admin');
+        $latestPosts = Cache::remember('latestPosts', now()->addDay(), function () {
+            return Post::published()->with('categories')->latest('published_at')->take(9)->get();
+        });
+
+        return view('home', [
+            'featuredPosts' => $featuredPosts,
+            'latestPosts' => $latestPosts
+        ]);
     }
 }

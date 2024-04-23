@@ -15,11 +15,12 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
+            $table->foreignId('department_id')->nullable();
+            $table->tinyInteger('academic_year')->nullable();
+            $table->string('nic', 12)->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
-            //0 =User; 1 = Editor; 2 = Admin
-            $table->boolean('is_admin')->default(0);
             $table->foreignId('current_team_id')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();
             $table->timestamps();
